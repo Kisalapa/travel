@@ -71,3 +71,51 @@
     src: local(""), url("../fonts/magra-v14-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/magra-v14-latin-700.woff2") format("woff2"), url("../fonts/magra-v14-latin-700.woff") format("woff"), url("../fonts/magra-v14-latin-700.ttf") format("truetype"), url("../fonts/magra-v14-latin-700.svg#Magra") format("svg");
     /* Legacy iOS */
 }
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: "Red Hat Text", Verdana, sans-serif;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+
+button,
+html input[type=text],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.navigation__link,
+.button {
+    transition: all 0.3s ease-out;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+}
