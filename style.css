@@ -398,3 +398,76 @@ ul {
     width: 60px;
     height: 45px;
 }
+
+/*section destinations*/
+
+.slider__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 800px;
+    padding-top: 50px;
+}
+
+.slider {
+    Width: 100%;
+    display: flex;
+    margin-left: -400px;
+    margin-right: -400px;
+
+}
+.slider::nth-child(2) {
+    flex-grow: 1
+}
+.slide {
+    height: 800px;
+    width: 800px;
+    margin: 20px;;
+    cursor: pointer;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500 ms ease-in-out;
+}
+
+.slide h3 {
+    font-family: "Red Hat Text", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    font-size: 3.2rem;
+    color: #fff;
+
+}
+
+.dots {
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 30px;
+}
+
+.dots__item {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+}
+
+.dots__item_active {
+    background-color: #f2785c;
+}
+.dots__item_inactive {
+    background-color: transparent;
+    border: 1px solid rgba(242, 120, 92, 0.5);
+}
