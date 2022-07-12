@@ -708,3 +708,33 @@ figure {
         font-size: 1rem;
         padding-left: 15px;
     }
+    .destinations__title {
+        margin-bottom: 20px;
+    }
+
+    figure:nth-child(2) {
+        order: -1;
+    }
+
+    .slider__item-title {
+        top: 3px;
+        left: 15px;
+        font-size: 2rem;
+        line-height: 26.46px;
+    }
+
+    .slider__photo {
+        border-radius: 16px;
+        width: 360px;
+        height: 210px;
+    }
+
+    .destinations__button {
+        width: 92px;
+    }
+
+    .button_find {
+        font-size: 1.1rem;
+        padding: 10px 12px 10px 12px;
+    }
+
