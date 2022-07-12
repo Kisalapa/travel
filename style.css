@@ -507,6 +507,7 @@ figure {
 .footer__link {
     align-self: center;
 }
+
 /*---------------- mobile version------------------ */
 .small_screen {
     display: none;
@@ -584,6 +585,7 @@ figure {
         opacity: 1;
         visibility: visible;
     }
+
     .header__item a {
         text-decoration: none;
         list-style: none;
@@ -596,8 +598,9 @@ figure {
     }
 
     .burger__wrapper {
-     display: flex;
-}
+        display: flex;
+    }
+
     .burger {
         display: block;
         position: fixed;
@@ -708,6 +711,7 @@ figure {
         font-size: 1rem;
         padding-left: 15px;
     }
+
     .destinations__title {
         margin-bottom: 20px;
     }
@@ -738,3 +742,77 @@ figure {
         padding: 10px 12px 10px 12px;
     }
 
+    .layout-2-column {
+        padding: 10px 0 10px 0;
+    }
+
+    .stories__title {
+        margin: 20px;
+    }
+
+    .stories__item {
+        display: flex;
+        gap: 10px;
+        margin: 0 auto;
+        padding-left: 15px;
+    }
+
+    .story__img {
+        width: 155px;
+        height: 130px;
+    }
+
+    .story__title {
+        font-size: 1.1rem;
+        line-height: 13.2px;
+        margin-bottom: 7px;
+        margin-top: 0;
+    }
+
+    .story__text {
+        font-size: 0.9rem;
+        line-height: 10.8px;
+        margin-right: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: calc(10.8px * 8)
+    }
+
+    .story__link {
+        font-size: 0.9rem;
+        line-height: 10.8px;
+        color: #0D606F;
+    }
+
+    .stories__button {
+        margin: 0 auto;
+        margin-top: 20px;
+        box-shadow: 3px rgba(13, 154, 179 0.16);
+        background: #0D606F;
+        border-radius: 10px;
+    }
+
+    .button_see {
+        padding: 10px 12px 13px 40px;
+        font-size: 1.1rem;
+        line-height: 14.55px;
+    }
+
+    .footer__wrapper {
+        justify-content: center;
+    }
+
+    .footer__text {
+        display: none;
+    }
+
+    .ico_info {
+        width: 25px;
+        height: 25px;
+    }
+
+    .personal-link:nth-child(2) {
+        margin-right: 10px;
+    }
+
+}
