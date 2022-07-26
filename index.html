@@ -7,38 +7,44 @@
     <title>Travel portal</title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+
+
 </head>
 <body>
     <div class="preview">
         <header class="header">
             <div class="wrapper header__wrapper">
+                <!-- <div class="burger_menu">
+                    <img class="burger_menu_img_close" src="./assets/img/svg/close_burger.svg" alt="close_burger">
+                   <ul>
+                    <li><a class="burger__item" href="#preview">How It Works</a></li>
+                    <li><a class="burger__item" href="#steps">Plan Your Trip</a></li>
+                    <li><a class="burger__item" href="#destinations">Destinations</a></li>
+                    <li><a class="burger__item" href="#stories">Travel Stories</a></li>
+                    <li><a class="burger__item" href="#">Account</a></li>
+                    <li><a class="burger__item" href="#socialmedia">Social Media</a></li>
+                    <li><a class="burger__item" href="#footer">Social Media</a></li>
+                   </ul>
+                </div> -->
                 <div class="header__logo">
-                    <a href="#"><img src="./assets/img/svg/favicon.svg" alt="Travel Portal"></a>
+                    <a href="#"><img src="./assets/img/svg/Vector.svg" alt="Travel Portal"></a>
                     <p class="logo__name">Travel Portal</p>
                 </div>
-                <div class="burger__wrapper">
-                    <a href="#" class="burger">
-                        <span></span></a>
-                </div>
                 <nav class="header__navigation">
-                    <ul class="header__menu">
-                        <li class="header__item"><a href="#preview" class="header__link">How It Works</a>
-                        </li>
-                        <li class="header__item"><a href="#steps" class="header__link">Plan Your Trip</a>
-                        </li>
-                        <li class="header__item"><a href="#destinations" class="header__link">Destinations</a>
-                        </li>
-                        <li class="header__item"><a href="#stories" class="header__link">Travel Stories</a>
-                        </li>
-                        <li class="header__item small_screen"><a href="#account" class="header__link">Account</a>
-                        </li>
-                        <li class="header__item small_screen"><a href="#social_media" class="header__link">Social
-                                Media</a>
-                        </li>
-                    </ul>
+                    <li class="header__item"><a href="#preview" class="header__link">How It Works</a>
+                    </li>
+                    <li class="header__item"><a href="#steps" class="header__link">Plan Your Trip</a>
+                    </li>
+                    <li class="header__item"><a href="#destinations" class="header__link">Destinations</a>
+                    </li>
+                    <li class="header__item"><a href="#stories" class="header__link">Travel Stories</a>
+                    </li>
                 </nav>
-                <button type="submit" class="button header__button">Login</button>
-            </div>
+                <button onclick="togglePopup()" type="submit" class="button header__button">Login</button>
+                <div class="burger__button">
+                    <img src="./assets/img/svg/burger_button.svg" alt="burger">
+                </div>
         </header>
         <main class="wrapper">
             <section id="preview" class="preview__content">
@@ -47,8 +53,10 @@
                 <p class="preview__text">Receive personalized recommendations for countries, hotels, activities and more
                 </p>
                 <form class="preview__search">
-                    <input type="search" class="search" placeholder="What would you like to do?" required>
-                    <button type="submit" class="button button_search">Start Planning</button>
+                    <input type="search" placeholder="What would you like to do?" required>
+                    <button type="submit" class="button button_search">
+                        <p>Start Planning</p>
+                    </button>
                 </form>
 
             </section>
@@ -76,12 +84,20 @@
                     </button>
                     <p class="steps__text">We will give you recommendations</p>
                 </div>
+
             </div>
         </div>
     </section>
+
     <section id="destinations" class="destinations">
         <div class="destinations__wrapper">
             <h2 class="title destinations__title">Popular Destinations</h2>
+            <div class="prev_mobile">
+                <img src="./assets/img/arrow-left.png" alt="arrow">
+            </div>
+            <div class="next_mobile">
+                <img src="./assets/img/arrow-right.png" alt="arrow">
+            </div>
             <div class="slider__wrapper">
                 <figure class="slider__item">
                     <img src="./assets/img/spain.jpg" alt="spain" class="slider__photo">
@@ -90,28 +106,56 @@
                 <figure class="slider__item">
                     <img src="./assets/img/japan.jpg" alt="japan" class="slider__photo">
                     <figcaption class="slider__item-title">japan</figcaption>
-
                 </figure>
                 <figure class="slider__item">
                     <img src="./assets/img/usa.jpg" alt="usa" class="slider__photo">
                     <figcaption class="slider__item-title">usa</figcaption>
-
                 </figure>
-                <!-- <a class="prev" onclick="minusSlide()">&#10094;</a>
-                <a class="next" onclick="plusSlide()">&#10095;</a> -->
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
+            <br>
             <div class="slider__dots">
-                <button class="slider__dot"></button>
-                <button class="slider__dot slider__dot_active"></button>
-                <button class="slider__dot"></button>
+                <button onclick="currentSlide(1)" class="slider__dot"></button>
+                <button onclick="currentSlide(2)" class="slider__dot"></button>
+                <button onclick="currentSlide(3)" class="slider__dot"></button>
             </div>
             <div class="destinations__button">
-                <button class="button button_find">Find More</button>
+                <button class="button button_find">
+                    <img src="./assets/img/svg/arrow-btn.svg" alt="arrow">
+                    <p>Find More</p>
+                </button>
             </div>
+            <footer class="footer">
+                <div class="wrapper footer__wrapper">
+                    <ul class="personal-links">
+                        <li class="personal-link">
+                            <a target="_blank" href="https://rs.school/js/"><img src="./assets/img/svg/rsschool.svg"
+                                    class="ico_info" alt="rsschool"></a>
+                        </li>
+                        <li class="personal-link">
+                            <a target="_blank" href="https://github.com/Kisalapa"><img class="ico_info"
+                                    src="./assets/img/svg/github.svg" alt="github"></a>
+                        </li>
+                    </ul>
+                    <p class="footer__text">All Rights Reserved © Travel Portal</p>
+                    <ul class="footer__icons">
+                        <li class="footer__icon"><a target="_blank" href="https://www.instagram.com/"
+                                class="footer__link"><img src="./assets/img/svg/instagram.svg" alt="instagram"></a></li>
+                        <li class="footer__icon"><a target="_blank" href="https://www.youtube.com/"
+                                class="footer__link "><img src="./assets/img/svg/video.svg" alt="youtube"></a></li>
+                        <li class="footer__icon"><a target="_blank" href="https://twitter.com/"
+                                class="footer__link "><img src="./assets/img/svg/twitter.svg" alt="twitter"></a></li>
+                        <li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     </section>
+
     <section id="stories" class="stories">
         <h2 class="title stories__title">Travel Stories</h2>
+
         <div class="stories__container">
             <div class="layout-2-column">
                 <div class="stories__item">
@@ -146,7 +190,7 @@
                 </div>
                 <div class="stories__item ">
                     <div>
-                        <img class="story__img" src="./assets/img/mountains.jpg " alt="mountains ">
+                        <img class="story__img" src="assets/img/mountains.jpg " alt="mountains ">
                     </div>
                     <div class="story ">
                         <h3 class="story__title ">I left my heart in the Mountains!</h3>
@@ -159,9 +203,10 @@
                                 class="story__link">Read More</a></span>
                     </div>
                 </div>
+
                 <div class="stories__item ">
                     <div class="story__photo">
-                        <img class="story__img" src="./assets/img/journey.jpg " alt="journey">
+                        <img class="story__img" src="assets/img/journey.jpg " alt="journey">
                     </div>
                     <div class="story ">
                         <h3 class="story__title ">The Longest journey in my life!</h3>
@@ -175,10 +220,14 @@
                                 class="story__link">Read More</a></span>
                     </div>
                 </div>
-                <div class="stories__button">
-                    <button class="button button_see">See More</button>
+                <div class="destinations__button stories__button">
+                    <button class="button button_find">
+                        <img src="./assets/img/svg/arrow-btn.svg" alt="arrow">
+                        <p>See More</p>
+                    </button>
                 </div>
             </div>
+
             <footer class="footer">
                 <div class="wrapper footer__wrapper">
                     <ul class="personal-links">
@@ -192,7 +241,7 @@
                         </li>
                     </ul>
                     <p class="footer__text">All Rights Reserved © Travel Portal</p>
-                    <ul class="footer__icons">
+                    <ul class="footer__icons" id="social_media">
                         <li class="footer__icon"><a target="_blank" href="https://www.instagram.com/"
                                 class="footer__link"><img src="./assets/img/svg/instagram.svg" alt="instagram"></a></li>
                         <li class="footer__icon"><a target="_blank" href="https://www.youtube.com/"
@@ -205,6 +254,47 @@
             </footer>
         </div>
     </section>
-    <script src="./assets/js/index.js"></script>
+    <div id="popup" class="popup">
+        <div class="popup__content">
+            <div class="popup__close" onclick="togglePopup()">x</div>
+            <h3 class="popup__title">Log in to your Account
+            </h3>
+            <div><button class="facebook_button">Sign In with Facebook</button></div>
+            <div><button class="Google_button">Sign In with Google</button></div>
+            <p class="line"></p>
+            <p>or</p>
+            <p class="line_2"></p>
+            <p>E-mail</p>
+            <div class="input-field"><input class="validate">
+            </div>
+            <p>Password</p>
+            <div class="input-field"><input class="validate">
+            </div>
+            <button class="second-button">Sign in</button>
+            <a href="##">Forgot Your Password?</a>
+            <p class="line_3"></p>
+            <p>Do not have an account?
+                <button onclick="togglePopup2()" type="submit" class="popup-link">Register</button>
+            </p>
+        </div>
+    </div>
+    <div id="popup_2" class="popup_2">
+        <div class="popup__content">
+            <div class="popup__close" onclick="togglePopup2()">x</div>
+            <h3 class="popup__title">Create Account
+            </h3>
+            <p>E-mail</p>
+            <div class="input-field"><input class="validate">
+            </div>
+            <p>Password</p>
+            <div class="input-field"><input class="validate">
+            </div>
+            <button class="second-button">Sign Up</button>
+            <p class="line_3"></p>
+            <p>Already have an account?<a class="popup-link" href="#">Log in</a>
+            </p>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
